@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditPatientViewController" customModule="FHIRPatients" customModuleProvider="target">
+            <connections>
+                <outlet property="addPhotoButton" destination="tjQ-lu-6ko" id="N51-l8-ZAW"/>
+                <outlet property="birthdateTextField" destination="yIS-QP-0Gn" id="mdB-gt-vZG"/>
+                <outlet property="datePicker" destination="bqu-2a-0cf" id="587-2c-brS"/>
+                <outlet property="datePickerToolbar" destination="HEv-vW-mhg" id="R39-oL-JLK"/>
+                <outlet property="editPhotoButton" destination="E4Z-BQ-iZS" id="fYk-Lt-Rxf"/>
+                <outlet property="familyNameTextField" destination="rUo-2B-5Ch" id="vIg-pJ-hS1"/>
+                <outlet property="genderControl" destination="J2e-sh-INu" id="UgQ-yJ-Ieq"/>
+                <outlet property="givenNameTextField" destination="cPr-Uy-Gfg" id="QWm-Kk-R28"/>
+                <outlet property="userImage" destination="cWD-ME-4fO" id="nQK-Wo-APl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bouncesZoom="NO" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <viewLayoutGuide key="safeArea" id="vLr-E1-eTs"/>
+            <view key="tableHeaderView" contentMode="scaleToFill" id="zj1-YX-xH0">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="188"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="i3V-dZ-i8k">
+                        <rect key="frame" x="8" y="8" width="359" height="172"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="4EP-n1-7HB">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="80"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yhB-O1-dpX">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cWD-ME-4fO" customClass="PatientAvatarView" customModule="FHIRPatients" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tjQ-lu-6ko">
+                                                <rect key="frame" x="2" y="10" width="46" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                <state key="normal" title="add photo"/>
+                                                <connections>
+                                                    <action selector="addPhotoTapped:" destination="-1" eventType="touchUpInside" id="t2I-dq-gpT"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="cWD-ME-4fO" firstAttribute="leading" secondItem="yhB-O1-dpX" secondAttribute="leading" id="FCv-yu-x7t"/>
+                                            <constraint firstAttribute="bottom" secondItem="cWD-ME-4fO" secondAttribute="bottom" id="R0Z-N4-ElY"/>
+                                            <constraint firstItem="cWD-ME-4fO" firstAttribute="top" secondItem="yhB-O1-dpX" secondAttribute="top" id="WS7-cv-mdB"/>
+                                            <constraint firstAttribute="trailing" secondItem="cWD-ME-4fO" secondAttribute="trailing" id="aKI-9e-in5"/>
+                                            <constraint firstAttribute="width" secondItem="yhB-O1-dpX" secondAttribute="height" multiplier="1:1" id="ris-Jt-Yxw"/>
+                                            <constraint firstAttribute="height" constant="50" id="vcZ-62-HzJ"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4Z-BQ-iZS">
+                                        <rect key="frame" x="10" y="54" width="30" height="26"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                        <state key="normal" title="edit"/>
+                                        <connections>
+                                            <action selector="editPhotoTapped:" destination="-1" eventType="touchUpInside" id="015-ft-fvc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="czR-xu-EA6"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gPT-me-RYX">
+                                <rect key="frame" x="58" y="0.0" width="301" height="172"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="J2e-sh-INu">
+                                        <rect key="frame" x="0.0" y="0.0" width="301" height="29"/>
+                                        <segments>
+                                            <segment title="Male"/>
+                                            <segment title="Female"/>
+                                            <segment title="Other"/>
+                                            <segment title="Unknown"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="genderValueChanged:" destination="-1" eventType="valueChanged" id="h1y-WG-hXO"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cPr-Uy-Gfg" customClass="UnderlinedTextField" customModule="FHIRPatients" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="36" width="301" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="NaG-6N-mIw"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="givenNameEditingChanged:" destination="-1" eventType="editingChanged" id="9Jc-Ld-jhs"/>
+                                            <outlet property="delegate" destination="-1" id="eA0-eQ-DQe"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rUo-2B-5Ch" customClass="UnderlinedTextField" customModule="FHIRPatients" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="84" width="301" height="40"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="familyNameEditingChanged:" destination="-1" eventType="editingChanged" id="rjE-GQ-XHr"/>
+                                            <outlet property="delegate" destination="-1" id="EYG-4b-bl6"/>
+                                        </connections>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="E1T-1X-WFM">
+                                        <rect key="frame" x="0.0" y="132" width="301" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" text="birthdate:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyo-uT-Rm9">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="48" horizontalCompressionResistancePriority="749" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yIS-QP-0Gn" customClass="UnderlinedTextField" customModule="FHIRPatients" customModuleProvider="target">
+                                                <rect key="frame" x="83" y="0.0" width="218" height="40"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="E1T-1X-WFM" firstAttribute="leading" secondItem="gPT-me-RYX" secondAttribute="leading" id="10U-8j-3bj"/>
+                                    <constraint firstItem="rUo-2B-5Ch" firstAttribute="width" secondItem="J2e-sh-INu" secondAttribute="width" id="5dm-9z-GSf"/>
+                                    <constraint firstItem="yIS-QP-0Gn" firstAttribute="height" secondItem="cPr-Uy-Gfg" secondAttribute="height" id="Gwz-Gr-oq4"/>
+                                    <constraint firstItem="cPr-Uy-Gfg" firstAttribute="width" secondItem="J2e-sh-INu" secondAttribute="width" id="Kv3-Ud-akj"/>
+                                    <constraint firstItem="rUo-2B-5Ch" firstAttribute="height" secondItem="cPr-Uy-Gfg" secondAttribute="height" id="UpL-hX-bQd"/>
+                                    <constraint firstAttribute="trailing" secondItem="E1T-1X-WFM" secondAttribute="trailing" id="aJY-h5-u9v"/>
+                                    <constraint firstItem="J2e-sh-INu" firstAttribute="leading" secondItem="gPT-me-RYX" secondAttribute="leading" id="vMx-9j-227"/>
+                                    <constraint firstAttribute="trailing" secondItem="J2e-sh-INu" secondAttribute="trailing" id="yal-Mb-ufH"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="i3V-dZ-i8k" firstAttribute="leading" secondItem="zj1-YX-xH0" secondAttribute="leading" constant="8" id="2wY-Do-Xjn"/>
+                    <constraint firstAttribute="bottom" secondItem="i3V-dZ-i8k" secondAttribute="bottom" constant="8" id="AS0-zW-7SV"/>
+                    <constraint firstItem="i3V-dZ-i8k" firstAttribute="top" secondItem="zj1-YX-xH0" secondAttribute="top" constant="8" id="fjJ-Uh-zmL"/>
+                    <constraint firstAttribute="trailing" secondItem="i3V-dZ-i8k" secondAttribute="trailing" constant="8" id="yqw-kc-8Uz"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="dataSource" destination="-1" id="Tng-2m-Rnh"/>
+                <outlet property="delegate" destination="-1" id="9aC-8N-iBw"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </tableView>
+        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="bqu-2a-0cf">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <date key="date" timeIntervalSinceReferenceDate="529182017.17830598">
+                <!--2017-10-08 19:00:17 +0000-->
+            </date>
+            <connections>
+                <action selector="datePickerEditingDidBeging:" destination="-1" eventType="editingDidBegin" id="qau-g4-HTv"/>
+                <action selector="datePickerValueChanged:" destination="-1" eventType="valueChanged" id="bq5-N7-aSZ"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="837"/>
+        </datePicker>
+        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="HEv-vW-mhg">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+            <items>
+                <barButtonItem title="Cancel" id="82g-FK-3iy">
+                    <connections>
+                        <action selector="dateCancelTapped:" destination="-1" id="56D-Lb-zZO"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem style="plain" systemItem="flexibleSpace" id="KWM-Wh-ugR"/>
+                <barButtonItem title="Done" id="ioc-Qu-Unm">
+                    <connections>
+                        <action selector="dateDoneTapped:" destination="-1" id="rKs-Ny-jqN"/>
+                    </connections>
+                </barButtonItem>
+            </items>
+            <point key="canvasLocation" x="34" y="656"/>
+        </toolbar>
+        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="Whh-Oy-ztk">
+            <rect key="frame" x="0.0" y="0.0" width="97" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <nil key="textColor"/>
+            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+            <textInputTraits key="textInputTraits"/>
+        </textField>
+    </objects>
+</document>

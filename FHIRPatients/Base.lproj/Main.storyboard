@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RMx-3f-FxP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Master-->
+        <scene sceneID="pY4-Hu-kfo">
+            <objects>
+                <navigationController title="Master" id="RMx-3f-FxP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" largeTitles="YES" id="Pmd-2v-anx">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7bK-jq-Zjz" kind="relationship" relationship="rootViewController" id="tsl-Nk-0bq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fS-aE-onr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1559" y="-1553"/>
+        </scene>
+        <!--Patients-->
+        <scene sceneID="smW-Zh-WAh">
+            <objects>
+                <tableViewController title="Patients" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="PatientListViewController" customModule="FHIRPatients" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="r7i-6Z-zg0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Arm-wq-HPj" style="IBUITableViewCellStyleDefault" id="WCw-Qf-5nD">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Arm-wq-HPj">
+                                            <rect key="frame" x="16" y="0.0" width="344" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="aDN-K0-LlM" kind="show" identifier="showDetail" id="D0y-pP-n0D"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="7bK-jq-Zjz" id="Gho-Na-rnu"/>
+                            <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Patients" largeTitleDisplayMode="always" id="Zdf-7t-Un8"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2306" y="-1553"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="cOE-de-K3r">
+            <objects>
+                <tableViewController storyboardIdentifier="DetailViewController" id="aDN-K0-LlM" customClass="DetailViewController" customModule="FHIRPatients" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" id="DyU-Mx-EAm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="BaR-Sy-mMd" customClass="PatientDetailHeaderView" customModule="FHIRPatients" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Iab-Yf-G4G">
+                                    <rect key="frame" x="107.5" y="8" width="160.5" height="135"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="jxy-co-c8u" customClass="PatientAvatarView" customModule="FHIRPatients" customModuleProvider="target">
+                                            <rect key="frame" x="43" y="0.0" width="75" height="75"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="jxy-co-c8u" secondAttribute="height" multiplier="1:1" id="C0x-zd-qam"/>
+                                                <constraint firstAttribute="width" constant="75" id="ogx-o3-hxg"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="4xR-kp-d0o">
+                                            <rect key="frame" x="0.0" y="83" width="160.5" height="52"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Joey Balogna" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfH-pP-MZo">
+                                                    <rect key="frame" x="4.5" y="0.0" width="151.5" height="31.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="999" text="male - 24/11/1978" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3L-Rg-zLQ">
+                                                    <rect key="frame" x="0.0" y="35.5" width="160.5" height="16.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="Iab-Yf-G4G" secondAttribute="bottom" constant="8" id="3zE-25-wjg"/>
+                                <constraint firstItem="Iab-Yf-G4G" firstAttribute="centerX" secondItem="BaR-Sy-mMd" secondAttribute="centerX" id="DRd-sp-OFp"/>
+                                <constraint firstItem="Iab-Yf-G4G" firstAttribute="top" secondItem="BaR-Sy-mMd" secondAttribute="top" constant="8" id="hZl-0x-pX3"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="avatar" destination="jxy-co-c8u" id="R78-ae-YET"/>
+                                <outlet property="birthLabel" destination="t3L-Rg-zLQ" id="YI3-gP-j81"/>
+                                <outlet property="nameLabel" destination="gfH-pP-MZo" id="8xK-hD-qTE"/>
+                            </connections>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="skB-Yb-aoX">
+                            <rect key="frame" x="0.0" y="268.5" width="375" height="104"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wah-dR-NMU">
+                                    <rect key="frame" x="16" y="27" width="343" height="50"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GFa-Xg-66E">
+                                            <rect key="frame" x="146.5" y="0.0" width="50" height="50"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epe-uC-HwB" customClass="SequenceStateButton" customModule="FHIRPatients" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <color key="backgroundColor" red="0.14039817452430725" green="0.48784685134887695" blue="0.89482790231704712" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="6kz-3c-ZDR"/>
+                                                        <constraint firstAttribute="width" secondItem="epe-uC-HwB" secondAttribute="height" multiplier="1:1" id="gbm-bK-0mU"/>
+                                                        <constraint firstAttribute="width" secondItem="epe-uC-HwB" secondAttribute="height" multiplier="1:1" id="h11-uW-MRq"/>
+                                                        <constraint firstAttribute="width" constant="50" id="yvj-JN-GOt"/>
+                                                    </constraints>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" image="upload-cloud"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="initialImage" value="upload-cloud"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="successImage" value="check-cloud"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="successColor">
+                                                            <color key="value" red="0.013244903585532415" green="0.70643638959390864" blue="0.028914778901227262" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="failureImage" value="sad-cloud"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="failureColor">
+                                                            <color key="value" red="0.93725490196078431" green="0.094117647058823528" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="25"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="uploadButtonTapped:" destination="aDN-K0-LlM" eventType="touchUpInside" id="D3I-Zs-ZKD"/>
+                                                    </connections>
+                                                </button>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zaz-5p-lN0" userLabel="Download Button" customClass="SequenceStateButton" customModule="FHIRPatients" customModuleProvider="target">
+                                                    <rect key="frame" x="-162.5" y="0.0" width="50" height="50"/>
+                                                    <color key="backgroundColor" red="0.14039817452430725" green="0.48784685134887695" blue="0.89482790231704712" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Zaz-5p-lN0" secondAttribute="height" multiplier="1:1" id="jF4-Ke-Acr"/>
+                                                        <constraint firstAttribute="height" constant="50" id="yX6-Sr-0EE"/>
+                                                    </constraints>
+                                                    <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" image="download-cloud"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="25"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="successColor">
+                                                            <color key="value" red="0.013244903590000001" green="0.70643638959999999" blue="0.0289147789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="failureColor">
+                                                            <color key="value" red="0.93725490196078431" green="0.094117647058823528" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="successImage" value="database-check"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="initialImage" value="download-cloud"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="failureImage" value="sad-cloud"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="downloadButtonTapped:" destination="aDN-K0-LlM" eventType="touchUpInside" id="Frm-Cp-Jyl"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OD-9I-bNW">
+                                            <rect key="frame" x="7.5" y="-27" width="328" height="0.0"/>
+                                            <state key="normal" title="Patient successfully uploaded. Tap here to view."/>
+                                            <connections>
+                                                <segue destination="uRf-6z-GZL" kind="presentation" identifier="loadRemoteResourceSegue" modalTransitionStyle="coverVertical" id="srU-xS-OXg"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="wah-dR-NMU" firstAttribute="leading" secondItem="skB-Yb-aoX" secondAttribute="leadingMargin" id="7eI-CJ-1Z9"/>
+                                <constraint firstAttribute="trailingMargin" secondItem="wah-dR-NMU" secondAttribute="trailing" id="nfK-8b-9zY"/>
+                                <constraint firstItem="wah-dR-NMU" firstAttribute="centerY" secondItem="skB-Yb-aoX" secondAttribute="centerY" id="oHZ-uz-Zw9"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="d8W-Jw-NML">
+                                <rect key="frame" x="0.0" y="206.5" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d8W-Jw-NML" id="s9H-yJ-FT5">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aDN-K0-LlM" id="Zpq-6c-8Ke"/>
+                            <outlet property="delegate" destination="aDN-K0-LlM" id="jVD-Bk-nG8"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="downloadButton" destination="Zaz-5p-lN0" id="UMg-f2-tWN"/>
+                        <outlet property="headerView" destination="BaR-Sy-mMd" id="ZyR-ws-cMg"/>
+                        <outlet property="uploadButton" destination="epe-uC-HwB" id="L3J-A8-3kA"/>
+                        <outlet property="viewPatientButton" destination="8OD-9I-bNW" id="5QT-Lh-fyu"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g3V-cx-SA0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3133.5999999999999" y="-1554.872563718141"/>
+        </scene>
+        <!--OnlineFHIR Resource View Controller-->
+        <scene sceneID="oJV-hn-ill">
+            <objects>
+                <viewController id="E7p-jp-JWd" customClass="OnlineFHIRResourceViewController" customModule="FHIRPatients" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BoB-I5-Pix">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahQ-Lf-fYA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZLv-Qi-hGR" firstAttribute="bottom" secondItem="ahQ-Lf-fYA" secondAttribute="bottom" id="5N9-9u-DUj"/>
+                            <constraint firstItem="ahQ-Lf-fYA" firstAttribute="leading" secondItem="ZLv-Qi-hGR" secondAttribute="leading" id="RjM-s8-i5S"/>
+                            <constraint firstItem="ahQ-Lf-fYA" firstAttribute="top" secondItem="ZLv-Qi-hGR" secondAttribute="top" id="YqT-qd-jxl"/>
+                            <constraint firstItem="ZLv-Qi-hGR" firstAttribute="trailing" secondItem="ahQ-Lf-fYA" secondAttribute="trailing" id="a71-sw-veg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZLv-Qi-hGR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oTy-t8-mqT">
+                        <barButtonItem key="leftBarButtonItem" title="Done" style="done" id="FzZ-gQ-Nzb">
+                            <connections>
+                                <action selector="doneTapped:" destination="E7p-jp-JWd" id="JdX-4T-iXs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="ahQ-Lf-fYA" id="dFb-ZR-veO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZsB-BM-HHo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4657" y="-1557"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="j4U-Be-sFo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uRf-6z-GZL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vlc-Iw-B3T">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="E7p-jp-JWd" kind="relationship" relationship="rootViewController" id="AOG-o8-lov"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KtH-NM-Rev" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3913.5999999999999" y="-1556.2218890554723"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="check-cloud" width="33" height="33"/>
+        <image name="database-check" width="33" height="33"/>
+        <image name="download-cloud" width="33" height="33"/>
+        <image name="sad-cloud" width="33" height="33"/>
+        <image name="upload-cloud" width="33" height="33"/>
+        <image name="user" width="23" height="22"/>
+    </resources>
+</document>

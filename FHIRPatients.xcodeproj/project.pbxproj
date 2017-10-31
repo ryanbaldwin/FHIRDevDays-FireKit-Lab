@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D12F67E1F92919B003BF070 /* EditPatientViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D12F67C1F92919B003BF070 /* EditPatientViewController.xib */; };
+		7D2F80B21FA130AA00FFD383 /* OnlineFHIRResourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2F80B11FA130AA00FFD383 /* OnlineFHIRResourceViewController.swift */; };
+		7D32E0581F8FD94100925EF3 /* PatientDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D32E0571F8FD94100925EF3 /* PatientDetailHeaderView.swift */; };
+		7D32E05A1F8FDA0C00925EF3 /* DetailViewController+Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D32E0591F8FDA0C00925EF3 /* DetailViewController+Datasource.swift */; };
+		7D3407EB1F8A80F200F4115E /* PatientListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3407EA1F8A80F200F4115E /* PatientListModel.swift */; };
+		7D3407F01F8A98F600F4115E /* EditPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3407EE1F8A98F600F4115E /* EditPatientViewController.swift */; };
+		7D3407F31F8A9D5300F4115E /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3407F21F8A9D5300F4115E /* UnderlinedTextField.swift */; };
+		7D3407F71F8A9F8800F4115E /* PatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3407F61F8A9F8800F4115E /* PatientModel.swift */; };
+		7D3407FA1F8AB9FA00F4115E /* EditPatientViewController+Interaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3407F91F8AB9FA00F4115E /* EditPatientViewController+Interaction.swift */; };
+		7D5E0EC61F857DA6009FD0BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E0EC51F857DA6009FD0BB /* AppDelegate.swift */; };
+		7D5E0EC81F857DA6009FD0BB /* PatientListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E0EC71F857DA6009FD0BB /* PatientListViewController.swift */; };
+		7D5E0ECA1F857DA6009FD0BB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E0EC91F857DA6009FD0BB /* DetailViewController.swift */; };
+		7D5E0ECD1F857DA6009FD0BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D5E0ECB1F857DA6009FD0BB /* Main.storyboard */; };
+		7D5E0ECF1F857DA6009FD0BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D5E0ECE1F857DA6009FD0BB /* Assets.xcassets */; };
+		7D5E0ED21F857DA6009FD0BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D5E0ED01F857DA6009FD0BB /* LaunchScreen.storyboard */; };
+		7D5E0EF51F85A346009FD0BB /* HttpPatients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E0EF41F85A346009FD0BB /* HttpPatients.swift */; };
+		7D5E0EF61F85A397009FD0BB /* FireKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5E0EF11F858480009FD0BB /* FireKit.framework */; };
+		7D5E0EF71F85A39D009FD0BB /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5E0EF01F858480009FD0BB /* Realm.framework */; };
+		7D5E0EF81F85A39D009FD0BB /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5E0EEF1F858480009FD0BB /* RealmSwift.framework */; };
+		7D5E0EF91F85A39D009FD0BB /* Restivus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5E0EF21F858480009FD0BB /* Restivus.framework */; };
+		7D5E0EFB1F85A3B3009FD0BB /* HttpDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E0EFA1F85A3B3009FD0BB /* HttpDefaults.swift */; };
+		7D5E0EFD1F85A4F1009FD0BB /* PatientListViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5E0EFC1F85A4F1009FD0BB /* PatientListViewController+DataSource.swift */; };
+		7D609F111F90029100DD9D77 /* PatientAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D609F101F90029100DD9D77 /* PatientAvatarView.swift */; };
+		7D971F4A1F93EADE00276E15 /* ContactPointSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D971F491F93EADE00276E15 /* ContactPointSystem.swift */; };
+		7D971F521F95851400276E15 /* AddCollectionItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D971F511F95851400276E15 /* AddCollectionItemView.xib */; };
+		7DC995531F93D5D100EF9154 /* EditContactPointCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC995511F93D5D100EF9154 /* EditContactPointCell.swift */; };
+		7DC995541F93D5D100EF9154 /* EditContactPointCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DC995521F93D5D100EF9154 /* EditContactPointCell.xib */; };
+		7DC995581F93D79B00EF9154 /* LabelPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC995561F93D79B00EF9154 /* LabelPickerViewController.swift */; };
+		7DC9955B1F93D7D300EF9154 /* LabelPickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC9955A1F93D7D300EF9154 /* LabelPickerModel.swift */; };
+		7DD78ACD1F9296F10055F5F8 /* EditPatientViewController+Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD78ACC1F9296F10055F5F8 /* EditPatientViewController+Datasource.swift */; };
+		7DD78AFC1F93A8CD0055F5F8 /* AddCollectionItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD78AFA1F93A8CD0055F5F8 /* AddCollectionItemView.swift */; };
+		7DD794E81FA6522000861F0F /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD794E71FA6522000861F0F /* UIImage+Extensions.swift */; };
+		C286C2A71FA0E83300941215 /* SequenceStateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286C2A61FA0E83300941215 /* SequenceStateButton.swift */; };
+		C2AD01B41FA7BC720073A500 /* DateFormatte+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AD01B31FA7BC720073A500 /* DateFormatte+Extensions.swift */; };
+		C2D564721FA26AD100089467 /* PatientSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D564711FA26AD100089467 /* PatientSearchController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7D12F67C1F92919B003BF070 /* EditPatientViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditPatientViewController.xib; sourceTree = "<group>"; };
+		7D2F80B11FA130AA00FFD383 /* OnlineFHIRResourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineFHIRResourceViewController.swift; sourceTree = "<group>"; };
+		7D32E0571F8FD94100925EF3 /* PatientDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDetailHeaderView.swift; sourceTree = "<group>"; };
+		7D32E0591F8FDA0C00925EF3 /* DetailViewController+Datasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController+Datasource.swift"; sourceTree = "<group>"; };
+		7D3407EA1F8A80F200F4115E /* PatientListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientListModel.swift; sourceTree = "<group>"; };
+		7D3407EE1F8A98F600F4115E /* EditPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPatientViewController.swift; sourceTree = "<group>"; };
+		7D3407F21F8A9D5300F4115E /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
+		7D3407F61F8A9F8800F4115E /* PatientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientModel.swift; sourceTree = "<group>"; };
+		7D3407F91F8AB9FA00F4115E /* EditPatientViewController+Interaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditPatientViewController+Interaction.swift"; sourceTree = "<group>"; };
+		7D5E0EC21F857DA6009FD0BB /* FHIRPatients.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FHIRPatients.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5E0EC51F857DA6009FD0BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7D5E0EC71F857DA6009FD0BB /* PatientListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientListViewController.swift; sourceTree = "<group>"; };
+		7D5E0EC91F857DA6009FD0BB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7D5E0ECC1F857DA6009FD0BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D5E0ECE1F857DA6009FD0BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D5E0ED11F857DA6009FD0BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7D5E0ED31F857DA6009FD0BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D5E0EEF1F858480009FD0BB /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		7D5E0EF01F858480009FD0BB /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		7D5E0EF11F858480009FD0BB /* FireKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FireKit.framework; path = Carthage/Build/iOS/FireKit.framework; sourceTree = "<group>"; };
+		7D5E0EF21F858480009FD0BB /* Restivus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Restivus.framework; path = Carthage/Build/iOS/Restivus.framework; sourceTree = "<group>"; };
+		7D5E0EF41F85A346009FD0BB /* HttpPatients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpPatients.swift; sourceTree = "<group>"; };
+		7D5E0EFA1F85A3B3009FD0BB /* HttpDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpDefaults.swift; sourceTree = "<group>"; };
+		7D5E0EFC1F85A4F1009FD0BB /* PatientListViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PatientListViewController+DataSource.swift"; sourceTree = "<group>"; };
+		7D609F101F90029100DD9D77 /* PatientAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientAvatarView.swift; sourceTree = "<group>"; };
+		7D971F491F93EADE00276E15 /* ContactPointSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPointSystem.swift; sourceTree = "<group>"; };
+		7D971F511F95851400276E15 /* AddCollectionItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCollectionItemView.xib; sourceTree = "<group>"; };
+		7DC995511F93D5D100EF9154 /* EditContactPointCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactPointCell.swift; sourceTree = "<group>"; };
+		7DC995521F93D5D100EF9154 /* EditContactPointCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditContactPointCell.xib; sourceTree = "<group>"; };
+		7DC995561F93D79B00EF9154 /* LabelPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelPickerViewController.swift; sourceTree = "<group>"; };
+		7DC9955A1F93D7D300EF9154 /* LabelPickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelPickerModel.swift; sourceTree = "<group>"; };
+		7DD78ACC1F9296F10055F5F8 /* EditPatientViewController+Datasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditPatientViewController+Datasource.swift"; sourceTree = "<group>"; };
+		7DD78AFA1F93A8CD0055F5F8 /* AddCollectionItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCollectionItemView.swift; sourceTree = "<group>"; };
+		7DD794E71FA6522000861F0F /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		C286C2A61FA0E83300941215 /* SequenceStateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceStateButton.swift; sourceTree = "<group>"; };
+		C2AD01B31FA7BC720073A500 /* DateFormatte+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatte+Extensions.swift"; sourceTree = "<group>"; };
+		C2D564711FA26AD100089467 /* PatientSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSearchController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D5E0EBF1F857DA6009FD0BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D5E0EF71F85A39D009FD0BB /* Realm.framework in Frameworks */,
+				7D5E0EF61F85A397009FD0BB /* FireKit.framework in Frameworks */,
+				7D5E0EF81F85A39D009FD0BB /* RealmSwift.framework in Frameworks */,
+				7D5E0EF91F85A39D009FD0BB /* Restivus.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D3407F51F8A9F7200F4115E /* patient */ = {
+			isa = PBXGroup;
+			children = (
+				7DC43D7F1F8DA3A000AD6187 /* detail */,
+				7DC43D801F8DA3A900AD6187 /* edit */,
+				7DC43D7E1F8DA38B00AD6187 /* master */,
+				C2D564711FA26AD100089467 /* PatientSearchController.swift */,
+			);
+			path = patient;
+			sourceTree = "<group>";
+		};
+		7D3407F81F8AA4BE00F4115E /* uikit */ = {
+			isa = PBXGroup;
+			children = (
+				C2AD01B31FA7BC720073A500 /* DateFormatte+Extensions.swift */,
+				7D609F101F90029100DD9D77 /* PatientAvatarView.swift */,
+				C286C2A61FA0E83300941215 /* SequenceStateButton.swift */,
+				7DD794E71FA6522000861F0F /* UIImage+Extensions.swift */,
+				7D3407F21F8A9D5300F4115E /* UnderlinedTextField.swift */,
+			);
+			path = uikit;
+			sourceTree = "<group>";
+		};
+		7D5E0EB91F857DA6009FD0BB = {
+			isa = PBXGroup;
+			children = (
+				7D5E0EC41F857DA6009FD0BB /* FHIRPatients */,
+				7D5E0EC31F857DA6009FD0BB /* Products */,
+				7D5E0EE71F85812E009FD0BB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7D5E0EC31F857DA6009FD0BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D5E0EC21F857DA6009FD0BB /* FHIRPatients.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D5E0EC41F857DA6009FD0BB /* FHIRPatients */ = {
+			isa = PBXGroup;
+			children = (
+				7D971F481F93EACF00276E15 /* firekit */,
+				7D5E0EF31F85A32C009FD0BB /* http */,
+				7D3407F81F8AA4BE00F4115E /* uikit */,
+				7D3407F51F8A9F7200F4115E /* patient */,
+				7D5E0EC51F857DA6009FD0BB /* AppDelegate.swift */,
+				7D3407F61F8A9F8800F4115E /* PatientModel.swift */,
+				7D5E0ECB1F857DA6009FD0BB /* Main.storyboard */,
+				7D5E0ECE1F857DA6009FD0BB /* Assets.xcassets */,
+				7D5E0ED01F857DA6009FD0BB /* LaunchScreen.storyboard */,
+				7D5E0ED31F857DA6009FD0BB /* Info.plist */,
+			);
+			path = FHIRPatients;
+			sourceTree = "<group>";
+		};
+		7D5E0EE71F85812E009FD0BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D5E0EF11F858480009FD0BB /* FireKit.framework */,
+				7D5E0EF01F858480009FD0BB /* Realm.framework */,
+				7D5E0EEF1F858480009FD0BB /* RealmSwift.framework */,
+				7D5E0EF21F858480009FD0BB /* Restivus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D5E0EF31F85A32C009FD0BB /* http */ = {
+			isa = PBXGroup;
+			children = (
+				7D5E0EFA1F85A3B3009FD0BB /* HttpDefaults.swift */,
+				7D5E0EF41F85A346009FD0BB /* HttpPatients.swift */,
+			);
+			path = http;
+			sourceTree = "<group>";
+		};
+		7D971F481F93EACF00276E15 /* firekit */ = {
+			isa = PBXGroup;
+			children = (
+				7D971F491F93EADE00276E15 /* ContactPointSystem.swift */,
+			);
+			path = firekit;
+			sourceTree = "<group>";
+		};
+		7D971F531F9590D200276E15 /* label picker */ = {
+			isa = PBXGroup;
+			children = (
+				7DC995561F93D79B00EF9154 /* LabelPickerViewController.swift */,
+				7DC9955A1F93D7D300EF9154 /* LabelPickerModel.swift */,
+			);
+			path = "label picker";
+			sourceTree = "<group>";
+		};
+		7DC43D7E1F8DA38B00AD6187 /* master */ = {
+			isa = PBXGroup;
+			children = (
+				7D3407EA1F8A80F200F4115E /* PatientListModel.swift */,
+				7D5E0EC71F857DA6009FD0BB /* PatientListViewController.swift */,
+				7D5E0EFC1F85A4F1009FD0BB /* PatientListViewController+DataSource.swift */,
+			);
+			path = master;
+			sourceTree = "<group>";
+		};
+		7DC43D7F1F8DA3A000AD6187 /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				7D5E0EC91F857DA6009FD0BB /* DetailViewController.swift */,
+				7D32E0591F8FDA0C00925EF3 /* DetailViewController+Datasource.swift */,
+				7D2F80B11FA130AA00FFD383 /* OnlineFHIRResourceViewController.swift */,
+				7D32E0571F8FD94100925EF3 /* PatientDetailHeaderView.swift */,
+			);
+			path = detail;
+			sourceTree = "<group>";
+		};
+		7DC43D801F8DA3A900AD6187 /* edit */ = {
+			isa = PBXGroup;
+			children = (
+				7DC995551F93D73500EF9154 /* cells */,
+				7D971F531F9590D200276E15 /* label picker */,
+				7D12F67C1F92919B003BF070 /* EditPatientViewController.xib */,
+				7D3407EE1F8A98F600F4115E /* EditPatientViewController.swift */,
+				7DD78ACC1F9296F10055F5F8 /* EditPatientViewController+Datasource.swift */,
+				7D3407F91F8AB9FA00F4115E /* EditPatientViewController+Interaction.swift */,
+			);
+			path = edit;
+			sourceTree = "<group>";
+		};
+		7DC995551F93D73500EF9154 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				7DD78AFA1F93A8CD0055F5F8 /* AddCollectionItemView.swift */,
+				7D971F511F95851400276E15 /* AddCollectionItemView.xib */,
+				7DC995511F93D5D100EF9154 /* EditContactPointCell.swift */,
+				7DC995521F93D5D100EF9154 /* EditContactPointCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D5E0EC11F857DA6009FD0BB /* FHIRPatients */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D5E0EE11F857DA6009FD0BB /* Build configuration list for PBXNativeTarget "FHIRPatients" */;
+			buildPhases = (
+				7D5E0EBE1F857DA6009FD0BB /* Sources */,
+				7D5E0EBF1F857DA6009FD0BB /* Frameworks */,
+				7D5E0EC01F857DA6009FD0BB /* Resources */,
+				7D5E0EEE1F858398009FD0BB /* Carthage Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FHIRPatients;
+			productName = FHIRDevDays;
+			productReference = 7D5E0EC21F857DA6009FD0BB /* FHIRPatients.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D5E0EBA1F857DA6009FD0BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = bunnyhug.me;
+				TargetAttributes = {
+					7D5E0EC11F857DA6009FD0BB = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7D5E0EBD1F857DA6009FD0BB /* Build configuration list for PBXProject "FHIRPatients" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7D5E0EB91F857DA6009FD0BB;
+			productRefGroup = 7D5E0EC31F857DA6009FD0BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D5E0EC11F857DA6009FD0BB /* FHIRPatients */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D5E0EC01F857DA6009FD0BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D5E0ED21F857DA6009FD0BB /* LaunchScreen.storyboard in Resources */,
+				7D5E0ECF1F857DA6009FD0BB /* Assets.xcassets in Resources */,
+				7D12F67E1F92919B003BF070 /* EditPatientViewController.xib in Resources */,
+				7D5E0ECD1F857DA6009FD0BB /* Main.storyboard in Resources */,
+				7DC995541F93D5D100EF9154 /* EditContactPointCell.xib in Resources */,
+				7D971F521F95851400276E15 /* AddCollectionItemView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7D5E0EEE1F858398009FD0BB /* Carthage Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/FireKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Restivus.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			name = "Carthage Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D5E0EBE1F857DA6009FD0BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D5E0ECA1F857DA6009FD0BB /* DetailViewController.swift in Sources */,
+				7D5E0EF51F85A346009FD0BB /* HttpPatients.swift in Sources */,
+				7D5E0EFB1F85A3B3009FD0BB /* HttpDefaults.swift in Sources */,
+				C286C2A71FA0E83300941215 /* SequenceStateButton.swift in Sources */,
+				7DC9955B1F93D7D300EF9154 /* LabelPickerModel.swift in Sources */,
+				7D3407FA1F8AB9FA00F4115E /* EditPatientViewController+Interaction.swift in Sources */,
+				7D5E0EC81F857DA6009FD0BB /* PatientListViewController.swift in Sources */,
+				7D971F4A1F93EADE00276E15 /* ContactPointSystem.swift in Sources */,
+				7D3407F31F8A9D5300F4115E /* UnderlinedTextField.swift in Sources */,
+				C2D564721FA26AD100089467 /* PatientSearchController.swift in Sources */,
+				7DD78ACD1F9296F10055F5F8 /* EditPatientViewController+Datasource.swift in Sources */,
+				7D3407F01F8A98F600F4115E /* EditPatientViewController.swift in Sources */,
+				7DD78AFC1F93A8CD0055F5F8 /* AddCollectionItemView.swift in Sources */,
+				7D2F80B21FA130AA00FFD383 /* OnlineFHIRResourceViewController.swift in Sources */,
+				7D5E0EFD1F85A4F1009FD0BB /* PatientListViewController+DataSource.swift in Sources */,
+				7DD794E81FA6522000861F0F /* UIImage+Extensions.swift in Sources */,
+				7D32E0581F8FD94100925EF3 /* PatientDetailHeaderView.swift in Sources */,
+				7D609F111F90029100DD9D77 /* PatientAvatarView.swift in Sources */,
+				7DC995531F93D5D100EF9154 /* EditContactPointCell.swift in Sources */,
+				7DC995581F93D79B00EF9154 /* LabelPickerViewController.swift in Sources */,
+				7D32E05A1F8FDA0C00925EF3 /* DetailViewController+Datasource.swift in Sources */,
+				C2AD01B41FA7BC720073A500 /* DateFormatte+Extensions.swift in Sources */,
+				7D5E0EC61F857DA6009FD0BB /* AppDelegate.swift in Sources */,
+				7D3407EB1F8A80F200F4115E /* PatientListModel.swift in Sources */,
+				7D3407F71F8A9F8800F4115E /* PatientModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7D5E0ECB1F857DA6009FD0BB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D5E0ECC1F857DA6009FD0BB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7D5E0ED01F857DA6009FD0BB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D5E0ED11F857DA6009FD0BB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D5E0EDF1F857DA6009FD0BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7D5E0EE01F857DA6009FD0BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7D5E0EE21F857DA6009FD0BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54F2GBB767;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FHIRDevDays/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/FHIRPatients/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.bunnyhug.FHIRPatients;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7D5E0EE31F857DA6009FD0BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54F2GBB767;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FHIRDevDays/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/FHIRPatients/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.bunnyhug.FHIRPatients;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D5E0EBD1F857DA6009FD0BB /* Build configuration list for PBXProject "FHIRPatients" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D5E0EDF1F857DA6009FD0BB /* Debug */,
+				7D5E0EE01F857DA6009FD0BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D5E0EE11F857DA6009FD0BB /* Build configuration list for PBXNativeTarget "FHIRPatients" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D5E0EE21F857DA6009FD0BB /* Debug */,
+				7D5E0EE31F857DA6009FD0BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D5E0EBA1F857DA6009FD0BB /* Project object */;
+}
