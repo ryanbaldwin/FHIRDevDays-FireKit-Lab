@@ -12,7 +12,7 @@ import Restivus
 
 /// A request which finds patients matching (fuzzily) a provided `family` name.
 /// Provides a `FireKit.Bundle` of all matches returned by the server.
-struct FindPatientsRequest: Authenticating, Gettable {
+struct FindPatientsRequest: Interceptable, Gettable {
     typealias ResponseType = FireKit.Bundle
     var path: String { return "/Patient?family=\(familyName)" }
     

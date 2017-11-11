@@ -37,29 +37,20 @@ class PatientModel {
     private var realm = try! Realm()
     
     /// The patient to edit. If this instance is creating a new Patient, then `patient` will be nil.
-    private var patientToEdit: Patient? {
+    private var patient: Patient {
         didSet {
-            if let patient = patientToEdit {
-                setup(withPatient: patient)
-            } else {
-                gender = nil
-                givenName = nil
-                familyName = nil
-                dateOfBirth = nil
-                telecoms = []
-            }
+            setup(withPatient: patient)
         }
     }
     
     /// Returns true if this patient can be downloaded from the remote FHIR server; otherwise false.
     var canDownloadPatient: Bool {
-        return patientToEdit?.id != nil
+        return patient.id != nil
     }
     
     /// Returns `true` if the patient can be uploaded to the remote FHIR server; otherwise `false`
     var canUploadPatient: Bool {
-        guard let patient = self.patientToEdit else { return false }
-        return realm.object(ofType: Patient.self, forPrimaryKey: patient.pk) != nil
+        return patient.realm != nil
     }
     
     /// Returns the `Reference` for the patient under edit.
@@ -67,7 +58,7 @@ class PatientModel {
     /// or edit a patient which has not been uploaded to the remote FHIR server,
     /// then `reference` returns nil.
     var reference: Reference? {
-        guard let patientId = patientToEdit?.id else { return nil }
+        guard let patientId = patient.id else { return nil }
         return Reference(withReferenceId: "\(Patient.resourceType)/\(patientId)")
     }
     
@@ -118,9 +109,8 @@ class PatientModel {
     /// - Parameter patient: When provided, this instance will operate in "edit mode" for the givne patient;
     ///                      otherwise this instance will create a new patient.
     init(patient: Patient? = nil) {
-        guard let patient = patient else { return }
-        self.patientToEdit = patient
-        setup(withPatient: patient)
+        self.patient = patient ?? Patient()
+        setup(withPatient: self.patient)
     }
     
     /// Setup this instance to operate over the provided `Patient`
@@ -189,7 +179,7 @@ class PatientModel {
     ///   - The patient cannot be uploaded (possibly because it hasn't been saved yet)
     ///   - The attempt to submit the upload request failed
     func uploadPatient(completion: ((Error?) -> ())? = nil) throws {
-        guard canUploadPatient, let patient = patientToEdit else {
+        guard canUploadPatient else {
             print("Cannot upload the patient at this time. Has the patient been saved?")
             throw PatientOperationError(message: "Cannot upload the patient at this time. Has the patient been saved?",
                                         error: nil)
@@ -226,7 +216,7 @@ class PatientModel {
     ///   - The patient cannot be downloaded.
     ///   - The attempt to download the patient failed
     func downloadPatient(completion: ((Error?) -> ())? = nil) throws {
-        guard canDownloadPatient, let patient = patientToEdit else {
+        guard canDownloadPatient else {
             print("Cannot download the patient at this time. Does the patient have a proper `Reference`?")
             throw PatientOperationError(
                 message: "Cannot download the patient at this time. Does the patient have a proper FHIR Reference?",

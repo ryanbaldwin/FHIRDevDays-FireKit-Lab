@@ -17,18 +17,17 @@ extension Restable {
     var baseURL: String { return FHIR_SERVER_BASE_URL }
 }
 
-// MARK: - Default implementation of the Authenticating protocol which will set the `Prefer` header
+// MARK: - Default implementation of the Interceptable protocol which will set the `Prefer` header
 //         such that all requests return a representation of the FHIR Resource in question.
-extension Authenticating {
+extension Interceptable {
     
-    /// Returns a new "signed" or otherwise manipulated URLRequest.
     /// By default this function simply adds the `Prefer: return=representation` header so that mutating
     /// requests sent to the remote FHIR Server return the JSON representation of the resource
     /// instead of the default `OperationOutcome`.
     ///
     /// - Parameter request: The URLRequest to be modified.
     /// - Returns: The udpated URLRequest, containing the `Prefer` header, to be submitted to the server.
-    func sign(request: URLRequest) -> URLRequest {
+    func intercept(request: URLRequest) -> URLRequest {
         var req = request
         req.setValue("return=representation", forHTTPHeaderField: "Prefer")
         return req
